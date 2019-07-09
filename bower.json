@@ -1,0 +1,20 @@
+{
+  "name": "express-app",
+  "description": "A simple chatting app made using express js",
+  "main": "index.js",
+  "authors": [
+    "harsh2323 <harsh237@protonmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/harsh2323/Express-app",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}
