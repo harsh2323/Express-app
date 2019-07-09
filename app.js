@@ -3,11 +3,21 @@ var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 
-var PORT = 3000;
-
 app.use(express.static(__dirname + '/bower_components'));
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
+});
+
+io.on('connection', function(client){
+    console.log('Client connected....');
+    client.on('join', function(data){
+        console.log(data);
+    });
+
+    client.on('messages', function(data){
+        client.emit('broad', data);
+        client.broadcast.emit('broad', data)
+    });
 });
 
 app.get('/user-profile/:name?', (req, res) => {
@@ -15,6 +25,4 @@ app.get('/user-profile/:name?', (req, res) => {
     res.send(`UserName is ${name}`);
 })
 
-app.listen(PORT, function(){
-    console.log(`App listening on port ${PORT}`);
-})
+server.listen(3000);
