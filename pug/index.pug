@@ -2,9 +2,16 @@ doctype html
 html(lang="en")
   head
   body
-    h1 Hello World!
+    h1(align="center") Hello World!
     #future
     form#form
+      style.
+        #form {
+            margin: auto;
+            width: 50%;
+            border: 3px solid green;
+            padding: 10px;
+        }
       input#chat_input(type="text")
       input(type="submit" value="Send")
     script(src="https://code.jquery.com/jquery-1.10.2.js")
@@ -19,7 +26,7 @@ html(lang="en")
       });
       //- This sends a message on the future div
       socket.on('broad', function(data){
-        $('#future').html(data + 'Hello');
+        $('#future').html(data);
       });
       //- This gets triggered when the client hits the submit button
       $('form').submit(function(e){

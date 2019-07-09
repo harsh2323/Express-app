@@ -1,4 +1,9 @@
-<!DOCTYPE html><html lang="en"><head></head><body><h1>Hello World!</h1><div id="future"></div><form id="form"><input id="chat_input" type="text"><input type="submit" value="Send"></form><script src="https://code.jquery.com/jquery-1.10.2.js"></script><script src="/socket.io/socket.io.js"></script><script>//- Connect to the server
+<!DOCTYPE html><html lang="en"><head></head><body><h1 align="center">Hello World!</h1><div id="future"></div><form id="form"><style>#form {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}</style><input id="chat_input" type="text"><input type="submit" value="Send"></form><script src="https://code.jquery.com/jquery-1.10.2.js"></script><script src="/socket.io/socket.io.js"></script><script>//- Connect to the server
 var socket = io.connect('http://localhost:3000');
 //- This triggers once the client gets connected to the server
 socket.on('connect', function(data){
@@ -7,10 +12,11 @@ socket.on('connect', function(data){
 });
 //- This sends a message on the future div
 socket.on('broad', function(data){
-  $('#future').html(data + 'Hello');
+  $('#future').html(data);
 });
 //- This gets triggered when the client hits the submit button
 $('form').submit(function(e){
+//- do not perform the default action
   e.preventDefault();
   var message = $('#chat_input').val();
   socket.emit('messages', message)

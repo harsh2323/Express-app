@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/harsh2323/Express-app#readme",
   "dependencies": {
+    "css": "^2.2.4",
     "express": "^4.17.1",
     "iojs": "^1.0.0",
     "pug": "^2.0.4",
