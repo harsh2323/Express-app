@@ -1,9 +1,11 @@
 var express = require('express');
+var path = require('path');
 var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 
 app.use(express.static(__dirname + '/bower_components'));
+app.use("/styles", express.static(__dirname + '/styles'));
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
