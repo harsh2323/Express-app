@@ -4,6 +4,7 @@
   "description": "A simple chatting app made using express js",
   "main": "index.js",
   "scripts": {
+    "deploy": "npm build && surge -p build --bruteapp.co.nf.surge.sh",
     "start": "node app.js"
   },
   "repository": {
@@ -21,6 +22,7 @@
     "express": "^4.17.1",
     "iojs": "^1.0.0",
     "pug": "^2.0.4",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.2.0",
+    "surge": "^0.21.3"
   }
 }
