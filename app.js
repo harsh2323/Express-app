@@ -6,6 +6,7 @@ var io = require('socket.io')(server);
 
 app.use(express.static(__dirname + '/bower_components'));
 app.use("/styles", express.static(__dirname + '/styles'));
+app.use("/js", express.static(__dirname + "/js"));
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
