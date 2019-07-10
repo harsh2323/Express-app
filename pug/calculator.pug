@@ -1,7 +1,27 @@
-doctyple html
+doctype html
 html
     head 
         title Calculator
-        link(href="/styles/style.css" rel="stylesheet" type="text/css" media="screen")
-    h1(align="center") Welcome to the calculator
-    form#calculator
+        link(href="/styles/calculator.css" rel="stylesheet" type="text/css" media="screen")
+    h2(align="center") Welcome to the calculator
+    
+    #Output
+    form#text
+        input#texts(type="text")
+    #One
+    form#form.box.red
+        input#1.button(type="button" value="1")
+        input#2.button(type="button" value="2")
+        input#3.button(type="button" value="3")
+    #two
+    form#form.box.red
+        input#4.button(type="button" value="1")
+        input#5.button(type="button" value="1")
+        input#6.button(type="button" value="1")
+    #three
+    form#form.box.red
+        input#7.button(type="button" value="1")
+        input#8.button(type="button" value="1")  
+        input#9.button(type="button" value="1")
+
+

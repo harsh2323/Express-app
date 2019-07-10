@@ -1,0 +1,42 @@
+#text {
+    border: 0.2pc solid black;
+    padding: 10px;
+    width: 100px;
+    margin: 0 auto;
+}
+
+texts {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+#One {
+    display: inline;
+}
+
+#two {
+    display: inline;
+}
+
+#three {
+    display: inline;
+}
+
+#form {
+    text-align: center;
+    display: block;
+    width: 640px;
+    margin: auto;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+.red {
+    background: silver;
+}
+
+.button {
+    font-size: 30px;
+}
