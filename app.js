@@ -23,6 +23,10 @@ io.on('connection', function(client){
     });
 });
 
+app.get('/calculator', (req, res) => {
+    res.sendFile(__dirname + '/pages/calculator.html');
+});
+
 app.get('/user-profile/:name?', (req, res) => {
     var name = req.params.name;
     res.send(`UserName is ${name}`);

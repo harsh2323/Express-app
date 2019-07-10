@@ -1,13 +1,92 @@
-#form {
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font: 13px Helvetica, Arial;
+    background-image: url("https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bradutch.com%2Fwp-content%2Fuploads%2F2018%2F09%2Fvideoblocks-blue-business-background-2_h3cvzluwb_thumbnail-full01.png&f=1");
+}
+form {
+    background: transparent;
+    padding: 3px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     margin: auto;
-    width: 50%;
+}
+form input {
+    border: 0;
+    padding: 10px;
+    width: 90%;
+    margin-right: 0.5%;
+}
+form button {
+    width: 9%;
+    background: rgb(130, 224, 255);
+    border: none;
     padding: 10px;
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font: 13px Helvetica, Arial;  background-image: url("https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bradutch.com%2Fwp-content%2Fuploads%2F2018%2F09%2Fvideoblocks-blue-business-background-2_h3cvzluwb_thumbnail-full01.png&f=1");}
-form { background: transparent; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-#messages { list-style-type: none; margin: 0; padding: 0; }
-#messages li { padding: 5px 10px; }
-#messages li:nth-child(odd) { background: #eee; }
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#messages li {
+    padding: 5px 10px;
+}
+#messages li:nth-child(odd) {
+    background: #eee;
+}
+
+h1 {
+    position: relative;
+    padding: 15% 0 10%;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    font-family: "Montserrat", sans-serif;
+    text-shadow: black;
+}
+
+#rooms {
+    text-align: center;
+    display: block;
+    width: 640px;
+    padding: 10px;
+    border: 5px solid black;
+    margin: auto;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+.red {
+    background: silver;
+}
+
+#chat_input {
+    color: black;
+    background-color:silver;
+}
+
+#Button_input {
+    background-color: silver; /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 2px solid black;
+}
+
+#form {
+    border: 2px solid black;
+}

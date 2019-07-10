@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title>First App</title><link href="styles/style.css" rel="stylesheet" type="text/css" media="screen"></head><body><h1 align="center">Hello World!</h1><div id="future"></div><form id="form"><input id="chat_input" type="text"><input type="submit" value="Send"></form><script src="https://code.jquery.com/jquery-1.10.2.js"></script><script src="/socket.io/socket.io.js"></script><script>//- Connect to the server
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>First App</title><link href="styles/style.css" rel="stylesheet" type="text/css" media="screen"></head><body><h1 align="center">Hello World!</h1><div class="box red" id="rooms"><input id="Chat_type" type="submit" value="New room"></div><div id="future"></div><form id="form"><input id="chat_input" type="text"><input id="Button_input" type="submit" value="Send"></form><script src="https://code.jquery.com/jquery-1.10.2.js"></script><script src="/socket.io/socket.io.js"></script><script>//- Connect to the server
 var socket = io.connect('http://localhost:3000');
 //- This triggers once the client gets connected to the server
 socket.on('connect', function(data){

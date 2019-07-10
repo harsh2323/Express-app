@@ -3,13 +3,15 @@ html
   head
     meta(charset="UTF-8")
     title First App
-    link(href="index.css" rel="stylesheet" type="text/css" media="screen")
+    link(href="styles/style.css" rel="stylesheet" type="text/css" media="screen")
   body
     h1(align="center") Hello World!
+    #rooms.box.red
+      input#Chat_type(type="submit" value="New room") 
     #future
     form#form
       input#chat_input(type="text")
-      input(type="submit" value="Send")
+      input#Button_input(type="submit" value="Send")
     script(src="https://code.jquery.com/jquery-1.10.2.js")
     script(src="/socket.io/socket.io.js")
     script.
