@@ -12,4 +12,6 @@ You will require some dependicies to run this app
 Add a '/calculator' to go to the calculator page.
 does not work yet
 
+This Application is now deployed on github at https://harsh2323.github.io/Express-app/
+
 Work in progress
