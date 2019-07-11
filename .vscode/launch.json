@@ -1,13 +1,17 @@
 {
     "version": "0.2.0",
-    "configurations": [
+    "configurations": [     
         {
             "type": "node",
             "request": "launch",
             "name": "Debug",
             "args": [
                 "./app.js"
-            ]
+            ],
+            "env": {
+                "host": "0.0.0.0",
+                "port": "8080"
+            }
         }
     ]
 }

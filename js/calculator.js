@@ -1,11 +1,9 @@
 'use strict'
-var one = document.getElementById("1");
 var text = document.getElementById("texts");
 var out = [];
 var opAr = [];
 var firstNo = [];
 var secondNo = [];
-var result;
 var operations = ["plus", "minus", "divide", "multiply"];
 var keyV;
 var valueV;
@@ -19,8 +17,9 @@ var operationss = {
 function updateTextValue(number){
     document.getElementById(`${number}`).addEventListener("click", () => {
         text = number;
-        out.push(text);
-        document.getElementById(`texts`).value = out.join("");
+        firstNo.push(text);
+        document.getElementById(`texts`).value = firstNo.join("");
+
     })
 }
 
@@ -28,32 +27,53 @@ function updateOperationValue(operation){{
 
     document.getElementById(`${operation}`).addEventListener("click", () => {
 
-        operations.forEach(() => {
-            if( operation === "plus" || "minus" || "divide" || "multiply" ){
-                valueV = operationss[operation];
-                opAr.push(valueV);
-                opAr.shift();
-                console.log(opAr);
-                console.log(valueV);
-                document.getElementById("texts").value = valueV;
+        if( operation === "plus" || "minus" || "divide" || "multiply" ){
+            valueV = operationss[operation];
+            opAr.push(valueV);
+            firstNo.push(valueV);
+            document.getElementById("texts").value = firstNo.join("");
+        }
+        firstNo.pop();
+        for(let i = 1; i < 10; i++){
+            if(document.getElementById(`${i}`)){
+               afterOperation(opAr.join(""), i)
             }
-        })
+        }
     })
 }}
 
-function calculateValue(numberOne, numberTwo, operation) {
+function afterOperation(operation, number){
+    document.getElementById(`${number}`).addEventListener("click", () => {
+        secondNo.push(number);
+        firstNo.pop();
+        document.getElementById(`texts`).value = secondNo.join("");
+    })
+    document.getElementById("equal").addEventListener("click", () => {
+        calculateValue(firstNo.join(""), secondNo.join(""),  operation);
+    })
+}
 
-    if(operation === document.getElementById("plus")){
-        result = numberOne + numberTwo;
+function calculateValue(numberOne, numberTwo, operation) {
+    
+    var result;
+    if(operation === "+"){
+        result = parseInt(numberOne) + parseInt(numberTwo);
+        document.getElementById("texts").value = result;
     }
-    else if(operation === document.getElementById("minus")){
+    else if(operation === "-" ){
         result = numberOne - numberTwo;
+        document.getElementById("texts").value = result;
+
     }
-    else if(operation === document.getElementById("multiply")){
+    else if(operation === "*"){
         result = numberOne * numberTwo;
+        document.getElementById("texts").value = result;
+
     }
-    else if(operation === document.getElementById("divide")){
+    else if(operation === "/"){
         result = numberOne / numberTwo;
+        document.getElementById("texts").value = result;
+
     }
 }
 
@@ -72,4 +92,8 @@ for(var e = 0; e < operations.length; e++){
         var newOp = operations[e];
         updateOperationValue(newOp);
     }
+}
+
+if(window.location.reload){
+    document.getElementById("texts").value = 0;
 }

@@ -25,6 +25,11 @@
     display: inline;
 }
 
+#equal {
+    display: inline;
+    size: 100px;
+}
+
 #form {
     text-align: center;
     display: block;
