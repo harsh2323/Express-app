@@ -21,6 +21,10 @@
     display: inline;
 }
 
+#Operations {
+    display: inline;
+}
+
 #form {
     text-align: center;
     display: block;
