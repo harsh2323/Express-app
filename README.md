@@ -16,7 +16,7 @@ This will install all requirements
 
 Once installed you can run
 
-```electron .```
+```node app.js```
 
 to start the application
 
