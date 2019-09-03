@@ -8,10 +8,16 @@ You will require some dependicies to run this app
 - `expressjs`
 - `node.js`
 
-# Extras
-Add a '/calculator' to go to the calculator page.
-does not work yet
+Simply clone this repository and run
 
-This Application is now deployed on github at https://harsh2323.github.io/Express-app/
+```npm install```
+
+This will install all requirements
+
+Once installed you can run
+
+```electron .```
+
+to start the application
 
 Work in progress
