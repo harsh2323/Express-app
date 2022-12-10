@@ -19,7 +19,7 @@
   "homepage": "https://github.com/harsh2323/Express-app#readme",
   "dependencies": {
     "css": "^2.2.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "iojs": "^1.0.0",
     "jslint": "^0.12.1",
     "pug": "^2.0.4",
